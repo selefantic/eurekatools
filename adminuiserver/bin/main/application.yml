@@ -1,0 +1,29 @@
+server:
+ port: 8770
+ 
+spring:
+ application:
+  name: admin-server
+ security:
+  user:
+    name: admin
+    password: admin
+ boot:
+   admin:
+     ui:
+       title: 服务监控中心
+ thymeleaf:
+   enabled: false
+    #check-template: false
+    #check-template-location: false
+
+eureka:
+ client:
+  service-url:
+   defaultZone: http://user:123@192.168.2.44:8761/eureka/,http://user:123@192.168.2.45:8761/eureka/,http://user:123@192.168.2.46:8761/eureka/
+     
+logging:
+  config: classpath:log4j2.xml
+  level:
+    org.springframework.context.support.[PostProcessorRegistrationDelegate$BeanPostProcessorChecker]: WARN
+ 

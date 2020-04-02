@@ -1,0 +1,43 @@
+server:
+  port: 8888 #程序启动端口，也就是tomcat的端口
+spring:
+  application:
+    name: ConfigServer #应用名称，别名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/selefantic/springconfig.git
+          username: 52457473@qq.com
+          password: tong@19841224
+          basedir:  selefantic/springconfig
+          search-paths: '{application}'
+      label: master
+  #security:
+   # user:
+    #  name: cnf
+     # password: 123
+      
+logging:
+  config: classpath:log4j2.xml
+  level:
+    org.springframework.context.support.[PostProcessorRegistrationDelegate$BeanPostProcessorChecker]: WARN
+
+#将此服务注册到eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@192.168.2.44:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env,beans
+    health:
+      sensitive: false
