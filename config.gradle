@@ -4,13 +4,13 @@ ext {
     testngVersion = "7.0.0-beta7"
     
     springVersion = "5.2.1.RELEASE"
-    springbootVersion = "2.2.2.RELEASE"
-    springbootSecurityVersion="2.2.2.RELEASE"
+    springbootVersion = "2.1.3.RELEASE"
+    springbootSecurityVersion="2.1.3.RELEASE"
     undertowVersion="2.2.2.RELEASE"
        	
-    springbootConfVersion = "2.2.1.RELEASE"
-    springCloudStarterNetflixEurekaServerVersion="2.2.1.RELEASE"
-    springCloudStarterNetflixEurekaClientVersion="2.2.1.RELEASE"
+    springbootConfVersion = "2.1.3.RELEASE"
+    springCloudStarterNetflixEurekaServerVersion="2.1.3.RELEASE"
+    springCloudStarterNetflixEurekaClientVersion="2.1.3.RELEASE"
     
     log4jWebVersion="2.7"
         
