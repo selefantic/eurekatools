@@ -19,20 +19,20 @@ logging:
     
 eureka:
   instance:
-    hostname: ${MY_POD_NAME}
+    hostname: my-eureka
     preferIpAddress: false
     metadataMap.zone: zone1
     appname: ${spring.application.name}
   client:
     # 注册中心将自己作为客户端来尝试注册自己，注册中心集群环境下需开启此配置
-    register-with-eureka: true
+    register-with-eureka: false
      # 检索服务选项，注册中心不需要检索服务
-    fetch-registry: true
+    fetch-registry: false
     region: chn
     #availability-zones:
     #  chn: zone1,zone2
-    service-url:
-      defaultZone: ${EUREKA_DEFAULT_ZONE}
+    serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka/
       #zone1: http://user:123@192.168.2.44:8761/eureka/,http://user:123@192.168.2.45:8761/eureka/
       #zone2: http://user:123@192.168.2.46:8761/eureka/
     healthcheck:

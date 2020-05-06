@@ -49,10 +49,11 @@ subprojects {
     dependencies {
     	implementation "com.google.guava:guava:${guavaVersion}"    
 	    implementation "org.springframework.boot:spring-boot-starter-undertow:${undertowVersion}"
-	    implementation 'org.springframework.boot:spring-boot-starter-web'   
-	    implementation 'org.springframework.boot:spring-boot-starter-log4j2'   
-	    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	    implementation "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"   
+	    implementation "org.springframework.boot:spring-boot-starter-log4j2:${springbootVersion}"
+	    implementation "org.springframework.boot:spring-boot-starter-actuator:${springbootVersion}"
 	    //implementation "org.springframework.boot:spring-boot-starter-security:${springbootSecurityVersion}"
+	    implementation 'org.apache.logging.log4j:log4j-web:2.9.1'
 	    implementation 'com.github.ben-manes.caffeine:caffeine'
 
         configurations {

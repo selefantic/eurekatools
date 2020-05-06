@@ -8,7 +8,7 @@
 		<!--${sys:catalina.home}表示linux中环境变量中的tomcat根目录 用户主目录-->
 		<!--原来用logback时候在统一配置中心也配置一个logging.path=/opt/tomcat-log/${spring.application.name}   LOG_PATH是内置变量-->
 		<!--${sys:user.home}  用户主目录-->
-		<Property name="log_path">/usr/eurka/logs</Property>
+		<Property name="log_path">d:/logs/eurekaserver</Property>
 
 		<!-- 保留日志天数 D H M S 分别对应天 小时 分钟 秒 -->
 		<property name="KEEP_LOG_DAY">60D</property>
